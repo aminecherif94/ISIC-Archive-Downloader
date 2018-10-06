@@ -135,7 +135,9 @@ def download_descriptions_and_filter(ids: list, num_images_requested: int, filte
         if diagnosis == filter:
             # Save the description
             descriptions.append(description)
-            ImgDownloader.save_description(description, descs_dir)
+            #ImgDownloader.save_description(description, descs_dir)
+            save_img_description(description, descs_dir)
+            
 
             if num_images_requested is not None:
                 pbar.update(1)
